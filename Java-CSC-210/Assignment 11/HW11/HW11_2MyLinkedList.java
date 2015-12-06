@@ -3,7 +3,6 @@ package HW.HW11;
 
 import java.util.Objects;
 
-
 public class HW11_2MyLinkedList<E> {
 
     //	list whose elements are of type E
@@ -93,10 +92,12 @@ public class HW11_2MyLinkedList<E> {
             size--;
         }
     }
-    public boolean contains(E content){
-        for(int i=0; i<size; i++){
-            if(this.get(i)==content)
+
+    public boolean contains(E content) {
+        for (int i = 0; i < size; i++) {
+            if (this.get(i) == content) {
                 return true;
+            }
         }
         return false;
     }
@@ -126,24 +127,31 @@ public class HW11_2MyLinkedList<E> {
         if (this.size != other.size) {
             return false;
         }
-        for(int i=1;i<size;i++){
-            if(!(this.get(i)==other.get(i))){
+        ListNode current = this.head;
+        ListNode currentObj = other.head;
+        for (int i = 1; i < size; i++) {
+
+            if (!(current.getValue()==currentObj.getValue())) {
                 return false;
             }
+            current= current.getNext();
+            currentObj= currentObj.getNext();
+            
         }
         return true;
     }
-    
 
     @Override
     public String toString() {
         //return "MyLinkedList [head=" + head + ", tail=" + tail + ", size=" + size + "]";
-        String S= new String();
-        S= "MyLinkedList ["+this.get(0);
-        for(int i=1;i<size;i++){
-            S=S+ ", " + this.get(i);
+        String S = new String();
+        S = "MyLinkedList [" + this.head.getValue();
+        ListNode current= this.head.getNext();
+        for (int i = 1; i < size; i++) {
+            S = S + ", " + current.getValue();
+            current= current.getNext();
         }
-        S=S+ "]";
+        S = S + "]";
         return S;
     }
 

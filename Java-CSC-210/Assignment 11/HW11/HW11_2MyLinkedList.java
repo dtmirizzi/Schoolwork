@@ -131,7 +131,7 @@ public class HW11_2MyLinkedList<E> {
         ListNode currentObj = other.head;
         for (int i = 1; i < size; i++) {
 
-            if (!(current.getValue()==currentObj.getValue())) {
+            if (!(current.getValue().equals(currentObj.getValue()))) {
                 return false;
             }
             current= current.getNext();

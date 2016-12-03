@@ -37,5 +37,9 @@ public class Queue<E> {
     public E dequeue() {
 	return this.elements.remove();
     }
+    
+    public boolean isEmpty(){
+	return elements.isEmpty();
+    }
 
 }

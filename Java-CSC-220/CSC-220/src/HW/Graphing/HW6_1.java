@@ -15,38 +15,21 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package Notes;
+package HW.Graphing;
 
-import java.util.ArrayList;
+import java.io.IOException;
 
 /**
- *
- * @author dtmirizzi very efficent stack or queue because add remove back with
- * array list, or you can use a linked list and have an efficent remove front
- * final question! Stacks are useful for reversing string order
+ * @author dtmirizzi
  */
-public class Stack<E> {
+public class HW6_1 {
 
-    ArrayList<E> elements;
-
-    public Stack() {
-	elements = new ArrayList<E>();
-    }
-
-    public void push(E element) {
-	this.elements.add(element);
-    }
-
-    public E pop() {
-	return this.elements.remove(this.elements.size() - 1);
-    }
-
-    public boolean isEmpty() {
-	return this.elements.size() == 0;
-    }
-
-    public E peek() {
-	return this.elements.get(this.elements.size() - 1);
+    public static void main(String[] args) throws IOException {
+	UndirectedGraph UG1 = new UndirectedGraph();
+	UG1 = UG1.readGraph("/home/dtmirizzi/Notebook16-17/CSC-220/HW/Assignment 6/data.csv");
+	System.out.println(UG1.path(0, 12));
+	System.out.println(UG1.shortestPath(0, 12));
+	
     }
 
 }

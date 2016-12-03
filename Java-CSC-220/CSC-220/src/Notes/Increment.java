@@ -17,36 +17,18 @@
  */
 package Notes;
 
-import java.util.ArrayList;
-
 /**
  *
- * @author dtmirizzi very efficent stack or queue because add remove back with
- * array list, or you can use a linked list and have an efficent remove front
- * final question! Stacks are useful for reversing string order
+ * @author dtmirizzi
  */
-public class Stack<E> {
-
-    ArrayList<E> elements;
-
-    public Stack() {
-	elements = new ArrayList<E>();
+public class Increment implements Runnable{
+    public static int i =0;
+    public String message;
+    public Increment(String message){
+	this.message=message;
+    }	    
+    public void run(){
+	for(int j=0;j<10000;j++)
+	i++;
     }
-
-    public void push(E element) {
-	this.elements.add(element);
-    }
-
-    public E pop() {
-	return this.elements.remove(this.elements.size() - 1);
-    }
-
-    public boolean isEmpty() {
-	return this.elements.size() == 0;
-    }
-
-    public E peek() {
-	return this.elements.get(this.elements.size() - 1);
-    }
-
 }

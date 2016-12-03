@@ -15,38 +15,20 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package Notes;
+package HW.Graphing;
 
-import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  *
- * @author dtmirizzi very efficent stack or queue because add remove back with
- * array list, or you can use a linked list and have an efficent remove front
- * final question! Stacks are useful for reversing string order
+ * @author dtmirizzi
  */
-public class Stack<E> {
-
-    ArrayList<E> elements;
-
-    public Stack() {
-	elements = new ArrayList<E>();
-    }
-
-    public void push(E element) {
-	this.elements.add(element);
-    }
-
-    public E pop() {
-	return this.elements.remove(this.elements.size() - 1);
-    }
-
-    public boolean isEmpty() {
-	return this.elements.size() == 0;
-    }
-
-    public E peek() {
-	return this.elements.get(this.elements.size() - 1);
-    }
-
+public interface IAdjacencies {
+    public int size();
+    public Iterable<Integer> adjIt(int v);
+    public void addAdj(int node, int adj,boolean directed);
+    public Collection<Integer> adj(int v);
+    public boolean isAdj(int node, int adj);
+    public int degree(int node, boolean in);
+    public int numOfEdges(boolean dir);
 }

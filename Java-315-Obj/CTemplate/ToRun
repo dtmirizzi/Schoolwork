@@ -1,0 +1,5 @@
+To Run
+dtmirizzi@Deo:~/Notebook16-17/Sem 2/Obj$ g++ MainTemplate.cpp CTemplate.cpp -o Test.out 
+dtmirizzi@Deo:~/Notebook16-17/Sem 2/Obj$ ./test.out
+CHelloWorld Obj Constructed
+CHelloWorld Obj Deconstructed

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>395</x>
+      <y>320</y>
+      <w>105</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>JFrame
+--
+
+--
+
+--
+Responsibilities
+-- Provided by Java Swing API
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>395</x>
+      <y>235</y>
+      <w>105</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Game of Life Frame
+--
+
+--
+
+--
+Responsibilities
+-- Primary application container</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>475</x>
+      <y>5</y>
+      <w>105</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>JPanel
+--
+
+--
+
+--
+Responsibilities
+-- Provided by Java Swing API</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>375</x>
+      <y>90</y>
+      <w>145</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ControlPanel
+--
+JButton startButton // start animation
+JButton stopButton // stop animation
+JButton clearButton // clear grid
+JButton loadShape // read pre-stored shapes
+JButton RuleSet //change rule set
+JSlider Generation Delay
+JTextFrame Generation
+--
+
+--
+Responsibilities
+-- Container for system controls</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>90</y>
+      <w>130</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>GridPanel
+--
+
+--
+
+--
+Responsibilities
+-- Graphical display and mouse handler
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>155</y>
+      <w>105</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>
+GridBase
+--
+#grid : int[][]
+#height : int
+#width : int
+--
++getWidth() : int
++getHeight() : int
++setWidth(int) : void
++setHeight(int) : void
++setGridCell(int col, int row, int value) : void &lt;abstract&gt;
++getGridCell(int col, int row) : int &lt;abstract&gt;
++clear() : void &lt;abstract&gt;
++drawGridCell(int, int) : void
+--
+Responsibilities
+-- Basic functionality of the grid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>515</x>
+      <y>320</y>
+      <w>135</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+RuleSetInterface
+--
+
+--
++ApplyRule(GridBase grid) : void
+--
+Responsibilities
+-- Provides prototypes for rulesets
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>410</y>
+      <w>115</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Default
+--
++ApplyRule(GridBase grid) : void
+--
+
+--
+Responsibilities
+-- Implements Conway rule set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>410</y>
+      <w>115</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Alt Rule
+--
++ApplyRule(GridBase grid) : void
+--
+
+--
+Responsibilities
+-- Implements custom rule set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>445</x>
+      <y>285</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>445</x>
+      <y>55</y>
+      <w>70</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>55</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;130.0;40.0;130.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>380</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;100.0;40.0;100.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>380</y>
+      <w>65</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;30.0;10.0;30.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>185</y>
+      <w>45</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;40.0;70.0;40.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>475</x>
+      <y>140</y>
+      <w>140</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;110.0;260.0;110.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>305</x>
+      <y>5</y>
+      <w>85</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>Conway's Game of Life
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>300</x>
+      <y>50</y>
+      <w>95</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>These are the minimum set
+of attributes. Add more as
+necessary
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>75</y>
+      <w>45</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>70.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>75</y>
+      <w>45</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>625</x>
+      <y>140</y>
+      <w>55</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;170.0;10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>615</x>
+      <y>140</y>
+      <w>15</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>95</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>ClearSimulationActionListner
+--
+Clears GridBase</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>145</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GenerationActionListener
+--
+Chances Generation Delay</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>195</y>
+      <w>115</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>RandomInitilizationActionListner
+--
+Random GridBase</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>245</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>StartSimulationActionListner
+--
+Starts Universe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>290</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>StopSimulationActionListner
+--
+Stops Universe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>110</y>
+      <w>110</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>145</y>
+      <w>110</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>165</y>
+      <w>105</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>175</y>
+      <w>115</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>185</y>
+      <w>140</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>45</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>AddGridRecListener
+--
+On click add gridsquare</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
